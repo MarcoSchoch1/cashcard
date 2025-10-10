@@ -39,8 +39,7 @@ test {
      exceptionFormat "full"
      showCauses true
      showStackTraces true
-
-     // Change from false to true
-     showStandardStreams = true
+     showStandardStreams true
+	 displayGranularity 2
  }
 }
