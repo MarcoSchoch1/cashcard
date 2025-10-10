@@ -47,7 +47,7 @@ class CashcardApplicationTests {
 	@Test
 	@DirtiesContext
 	public void shouldCreateANewCashCard() {
-		final CashCard newCashCard = new CashCard(null, 250.00);
+		final CashCard newCashCard = new CashCard(null, 250.00, "sarah1");
 		final ResponseEntity<Void> createResponse = restTemplate.postForEntity("/cashcards", newCashCard, Void.class);
 		assertThat(createResponse.getStatusCode()).isEqualTo(HttpStatus.CREATED);
 		final URI locationOfNewCashCard = createResponse.getHeaders().getLocation();
