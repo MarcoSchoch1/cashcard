@@ -26,7 +26,8 @@ class SecurityConfig {
       final User.UserBuilder users = User.builder();
       final UserDetails sarah = users.username("sarah1").password(passwordEncoder.encode("abc123")).roles("CARD-OWNER").build();
       final UserDetails hank = users.username("hank").password(passwordEncoder.encode("qwe123")).roles("NON-OWNER").build();
-      return new InMemoryUserDetailsManager(sarah, hank);
+      final UserDetails kumar = users.username("kumar2").password(passwordEncoder.encode("yxc123")).roles("CARD-OWNER").build();
+      return new InMemoryUserDetailsManager(sarah, hank, kumar);
 
    }
 
